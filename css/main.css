@@ -1,0 +1,306 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+*/
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #e6e6e6;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*END OF RESET*/
+
+
+							body {
+								font-family: 'Roboto Slab', sans-serif;
+							}
+
+
+/*http://geekgirllife.com/animate-text-over-images-on-hover-without-javascript/*/
+
+/*STEP TWO*/
+
+.photo-grid {
+	margin: 1em auto;
+	max-width: 1106px;
+	text-align: center;
+}
+
+.photo-grid li {
+	border: 5px #e6e6e6;
+	display: inline-block;
+	margin: 1em;
+	width: 289px;
+}
+
+.photo-grid img {
+	display: block;
+	max-height: 100%;  /*changed from original "height: auto" to scale pics;*/
+	max-width: 100%;
+}
+
+.photo-grid figure {
+	height: 163px;
+	overflow: hidden;
+	position: relative;
+	width: 289px;
+
+
+				border: 7px;
+				border-style: solid;
+				border-radius: 15px;
+				border-color: orange;
+/*				background-size: 200%;
+				font-size: 20px;
+				color: white;
+				padding: 20px;
+				line-height: 200px;
+				text-decoration: none;
+*/				box-shadow: 15 30 0 5;
+
+
+
+
+
+
+
+}
+
+.photo-grid figcaption {
+	background: rgba(0,0,0,0.8);
+	color: white;
+	display: table;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.photo-grid figcaption p {
+	display: table-cell;
+	font-size: 1.5em;
+	position: relative;
+	top: -40px;
+	width: 289px;
+	vertical-align: middle;
+}
+
+
+
+
+/*STEP THREE*/
+.photo-grid li:hover figcaption {
+	opacity: 1;
+}
+
+
+
+/*STEP FOUR*/
+.photo-grid img {
+	display: block;
+	height: auto;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+	max-width: 100%;
+}
+
+.photo-grid li:hover img {
+	-webkit-transform: scale(1.4);
+	-moz-transform: scale(1.4);
+	transform: scale(1.4);
+}
+
+
+
+/*STEP FIVE*/
+
+.photo-grid figcaption p {
+	display: table-cell;
+	font-size: 1.5em;
+	position: relative;
+	top: -40px;
+	width: 289px;
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+	vertical-align: middle;
+}
+
+.photo-grid li:hover figcaption p {
+	-moz-transform: translateY(40px);
+	-webkit-transform: translateY(40px);
+	transform: translateY(40px);
+}
+
+
+/*STEP SIX*/
+
+.photo-grid figcaption {
+				background: rgba(138,139,140,0.8);					/* ORIGINAL WAS rgba(0,0,0,0.8);*/
+
+				/*background: rgba(0,0,0,0.8);*/
+				color: #702B62;											  /*ORIGINAL WAS white*/
+								font-weight: bold;
+								font-size: 1.60em;
+	display: table;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+	-webkit-transition-delay: 100ms;
+	-moz-transition-delay: 100ms;
+	transition-delay: 100ms;
+	z-index: 100;
+}
+
+
+					.subtext {
+						font-size: .5em;
+					}
+
+					.photo-grid figcaption img {float: left; padding: 5px;}				
+
+
+
+/*MY ADD-ONS FOR FRAMES, FRONT PAGE, ETC*/
+
+
+			
+
+			h1 {
+				color: #F38A00;
+				text-decoration: none;
+			}
+
+			h2 {
+			color: #00538A;
+				text-decoration: none;	
+			}
+
+			p {
+				color: #B00600;
+			}
+
+/*			a:link {
+				color: inherit;
+				text-decoration: none;
+			}
+*/
+
+
+				/*tutorial formatting*/
+
+				.frame {
+					background-color: #8A8B8C;
+				}
+
+				.name {
+					text-shadow: 4px 4px 8px black;
+				}
+
+				.logo {
+					display: inline;
+					width:50px;
+					height:50px;
+				}
+
+				.hoc_ksc {
+					color: #702B62;
+					display: block;
+					float: left;
+				}
+
+				.tutorial {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 2.75em;
+				}
+
+				.logout {
+					display: block;
+					float: right;
+					display: inline-block;
+					margin-top: 50px;
+					width: 150px;
+					word-wrap: normal;
+				}
+
+				.banner {
+					width: 100%;
+					margin: 0 auto;
+					display: inline-block;
+					text-align: center;
+					word-wrap: break-word;
+				}
+
+				.actual_game {
+
+				}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
